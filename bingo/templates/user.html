@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+
+
+{% load widget_tweaks %}
+   
+
+
+{%block body %}
+<style>
+    .gradient-custom-2 {
+/* fallback for old browsers */
+background: #fccb90;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+@media (min-width: 768px) {
+.gradient-form {
+height: 100vh !important;
+}
+}
+@media (min-width: 769px) {
+.gradient-custom-2 {
+border-top-right-radius: .3rem;
+border-bottom-right-radius: .3rem;
+}
+}
+</style>
+<section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+  x
+                  <div class="text-center">
+                    <img src="https://t3.ftcdn.net/jpg/03/36/97/04/360_F_336970443_duQB5NlWktGD2RFWAXwRbUoaBmAplZrF.jpg"
+                      style="width: 185px;" alt="logo">
+                    <h4 class="mt-1 mb-5 pb-1">BINGO</h4>
+                  </div>
+  
+                 
+  
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center">
+                <form action="{% url 'bingo:user' %}" method="post">
+                   {% csrf_token %}
+                    
+                    {% csrf_token %}
+                    {% for field in form.visible_fields %}
+                <div class="form-group"> 
+                    <label for="{{ field.label }}">{{field.label}}</label>
+                        <div class="input-group mb-4">
+                       
+                    {% render_field field class="form-control" placeholder=field.label %}
+                    </div>
+                        {% for error in field.errors %}
+                            <span class="text-error" >{{ error }}</span>
+              
+                            {% endfor %}
+                
+                        </div>
+            {% endfor %}
+                       
+
+                      
+                        <button type="submit" class="btn btn-primary">Continuar</button>
+                    </form>
+                      </div>
+  
+                   
+  
+                    
+  
+                    
+  
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{%endblock%}

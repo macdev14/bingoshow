@@ -1,0 +1,157 @@
+{% extends 'layout.html' %}
+
+
+   
+
+
+{%block body %}
+{% load tagname %}
+<style>
+    .bingo_head{
+        margin-right:100px; margin-left: 100px
+    }
+    .c{
+        margin-top:100px;
+    }
+    .bola{
+      margin-top:100px;
+    }
+</style>
+
+  <div class="container">
+    <div class="row text-center bola"><div class="col">
+      <h2> {{ 0|bingoletter_load }}</h2>
+    </div></div>
+  </div>
+
+<div class="container c">
+  
+  <div class="row"> 
+  <!-- <h1>
+    <span class="bingo_head"> B </span>
+    <span class="bingo_head"> I </span>
+    <span class="bingo_head"> N </span>
+    <span class="bingo_head"> G </span>
+    <span class="bingo_head" > O </span>
+  </h1> -->
+  <div class="col">
+    <table class="table table-bordered">
+      <thead>
+          <tr class="text-center">
+        <th>
+         <p>Quantas patas um aracnídeo possui?</p>
+        </th>
+       
+        
+       
+      
+     
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td class="text-center ball"><h2> A - {{ table.0}}</h2></td>
+       
+        </tr>
+        <tr>
+          <td class="text-center ball"><h2> B - {{ table.5 }} </h2></td> 
+          
+        </tr>
+        <tr>
+          <td class="text-center ball"><h2> C - {{ table.10}}</h2></td>
+         
+        </tr>
+  
+        <tr>
+          <td class="text-center ball"><h2>D - {{ table.15}}</h2></td>
+          
+        </tr>
+  
+        <tr>
+          <td class="text-center ball"><h2>E - {{ table.20}}</h2></td>
+         
+        </tr>
+    ball onclick -> check if value is equal to luck ball -> if is show question
+        if ball in table 
+  
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+<table class="table table-bordered">
+    <thead>
+        <tr class="text-center">
+      <th>
+       <h1>B</h1>
+      </th>
+     <th>
+      <h1> I </h1>  
+      </th>
+      <th>
+      <h1>  N</h1> 
+      </th>
+      <th>
+    <h1>  G</h1> 
+      </th>
+      <th>
+    <h1>   O </h1> 
+      </th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="text-center"><h2 class="ball b" >{{ table.0}}</h2></td>
+        <td class="text-center"><h2 class="ball i" >{{ table.1 }}</h2></td>
+        <td class="text-center"><h2 class="ball n" > {{ table.2 }} </h2></td>
+        <td class="text-center"><h2 class="ball g" > {{ table.3 }} </h2></td>
+        <td class="text-center"><h2 class="ball o" > {{ table.4 }} </h2></td>
+      </tr>
+      <tr>
+        <td class="text-center"><h2 class="ball b" > {{ table.5 }} </h2></td> 
+        <td class="text-center"><h2 class="ball i" > {{ table.6 }} </h2></td>
+        <td class="text-center"><h2 class="ball n" >{{ table.7 }} </h2></td>
+        <td class="text-center"><h2 class="ball g" > {{ table.8 }} </h2></td>
+        <td class="text-center"><h2 class="ball o" >{{ table.9 }} </h2></td>
+      </tr>
+      <tr>
+        <td class="text-center"><h2 class="ball b" >{{ table.10}}</h2></td>
+        <td class="text-center"><h2 class="ball i" >{{ table.11}}</h2></td>
+        <td class="text-center"><h2 class="ball n" >{{ table.12}}</h2></td>
+        <td class="text-center"><h2 class="ball g" >{{ table.13}}</h2></td>
+        <td class="text-center"><h2 class="ball o" >{{ table.14}}</h2></td>
+      </tr>
+
+      <tr>
+        <td class="text-center"><h2 class="ball b" >{{ table.15}}</h2></td>
+        <td class="text-center"><h2 class="ball i" >{{ table.16}}</h2></td>
+        <td class="text-center"><h2 class="ball n" >{{ table.17}}</h2></td>
+        <td class="text-center"><h2 class="ball g" >{{ table.18}}</h2></td>
+        <td class="text-center"><h2 class="ball o" >{{ table.19}}</h2></td>
+      </tr>
+
+      <tr>
+        <td class="text-center"><h2 class="ball b" >{{ table.20}}</h2></td>
+        <td class="text-center"><h2 class="ball i" >{{ table.21}} </h2></td>
+        <td class="text-center"><h2 class="ball n" >{{ table.22}}</h2></td>
+        <td class="text-center"><h2 class="ball g" >{{ table.23}}</h2> </td>
+        <td class="text-center"><h2 class="ball o" >{{ table.24 }}</h2></td>
+      </tr>
+
+      
+
+    </tbody>
+  </table>
+</div>
+ 
+</div>
+</div>
+<script>
+  document.getElementsByClassName('b')
+  document.getElementsByClassName('i')
+  document.getElementsByClassName('n')
+  document.getElementsByClassName('g')
+  document.getElementsByClassName('o')
+</script>
+{%endblock%}

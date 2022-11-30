@@ -1,0 +1,4 @@
+.env
+bingo-front/
+db.sqlite3
+__pycache__/
