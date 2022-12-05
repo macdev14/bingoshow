@@ -1,0 +1,30 @@
+# flyctl launch added from .gitignore
+**/.env
+**/bingo-front
+**/db.sqlite3
+**/__pycache__
+
+# flyctl launch added from bingo-front/.gitignore
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+bingo-front/node_modules
+bingo-front/.pnp
+bingo-front/**/.pnp.js
+
+# testing
+bingo-front/coverage
+
+# production
+bingo-front/build
+
+# misc
+bingo-front/**/.DS_Store
+bingo-front/**/.env.local
+bingo-front/**/.env.development.local
+bingo-front/**/.env.test.local
+bingo-front/**/.env.production.local
+
+bingo-front/**/npm-debug.log*
+bingo-front/**/yarn-debug.log*
+bingo-front/**/yarn-error.log*

@@ -44,7 +44,7 @@ class Pergunta(models.Model):
 class Tabela(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     # pergunta = models.ManyToManyField(Pergunta)
-    pecas = models.CharField(max_length=25)
+    pecas = models.CharField(max_length=100)
 
 
 
